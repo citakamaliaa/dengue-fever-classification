@@ -9,21 +9,21 @@ The dataset integrates data from multiple sources:
 2. **Weather Data**: Bandung Meteorology, Climatology, and Geophysics Agency (BMKG)
 3. **Demographies**: Bandung City Central Statistic Agency.
 
-###Features
+### Features
 The dataset contains 13 attributes and 1 output class:
 - Demographics: Total Population, Proportion of Male Population.
 - Blood Types: Total count of Blood Types A, B, AB, and O.
 - Weather: Rainfall, Temperature, Humidity.
 - Education: Number of graduates (Elementary, Middle School, High School, College).
 
-###Target Classes
+### Target Classes
 The Incidence Rate (IR) is calculated per 100,000 population and classified into three labels:
 
 - 0 (Low): IR < 55
 - 1 (Medium): 55 $\le$ IR $\le$ 100
 - 2 (High): IR > 100
 
-##Methodology
+## Methodology
 The project follows a structured machine learning pipeline:
 1. **Preprocessing**:
 - Imbalance Handling: The dataset is imbalanced. Synthetic Minority Over-sampling Technique (SMOTE) is used to balance the classes.
@@ -40,7 +40,7 @@ The project follows a structured machine learning pipeline:
 - Bagging: Uses Bootstrap Aggregating with Random Forest as the base estimator to reduce variance.
 - Stacking: Combines predictions from base learners (SVM, NB, DT, RF) and uses a Meta-Learner (Linear Regression) to make the final prediction.
 
-##Results
+## Results
 The experiments demonstrate that hybrid methods outperform single algorithms. The Hybrid Stacking method achieved the highest performance across all metrics.
 
 | Classifier | Accuracy | Precision | Recall | F1-Score |
@@ -51,6 +51,8 @@ The experiments demonstrate that hybrid methods outperform single algorithms. Th
 | **SVM** | 85.50% | 86.76% | 86.77% | 85.82% |
 | **Bagging (Hybrid)** | **88.70%** | **88.99%** | **89.18%** | **89.05%** |
 | **Stacking (Hybrid)** | **90.30%** | **90.62%** | **90.94%** | **90.65%** |
+
+![Dengue Fever Results Chart](results_chart.png)
 
 ## Installation & Usage
 1. **Clone the repository:**
